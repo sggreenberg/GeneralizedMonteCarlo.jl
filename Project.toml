@@ -3,6 +3,13 @@ uuid = "e9bfd9a4-9025-4baf-81dc-99e507987dd3"
 authors = ["sggreenberg <sggreenberg@protonmail.com>"]
 version = "0.1.0"
 
+[compat]
+julia = "1.6"
+Distributions = "0.25"
+DocStringExtensions = "0.8"
+Documenter = "0.27"
+Symbolics = "3.3"
+
 [deps]
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
