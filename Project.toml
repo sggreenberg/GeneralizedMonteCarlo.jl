@@ -1,6 +1,6 @@
 name = "GeneralizedMonteCarlo"
 uuid = "e9bfd9a4-9025-4baf-81dc-99e507987dd3"
-authors = ["scottggreenberg <s.greenberg@aggiemail.usu.edu>"]
+authors = ["sggreenberg <sggreenberg@protonmail.com>"]
 version = "0.1.0"
 
 [deps]
