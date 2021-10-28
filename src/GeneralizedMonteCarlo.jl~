@@ -46,7 +46,7 @@ needs to be ran before the function, as shown in the example below.
 #Example
 
 ```julia-repl
-julia> @variables iws ms p; GeneralizedMonteCarlo.GMC(10_000, [iws, ms, 190 + ms + p], [iws, ms, p], [[10_000_000 10_500_000 11_000_000; 0.2 0.6 0.2], [0.01 0.02 0.03 0.04 0.05 0.08; 0.10 0.20 0.30 0.25 0.10 0.05], [-3.0 3.0; 0.5 0.5]]) 
+julia> @variables iws ms p; GeneralizedMonteCarlo.GMC(10_000, [iws, ms, 190 + ms + p], [iws, ms, p], [[10_000_000 10_500_000 11_000_000; 0.2 0.6 0.2], [0.01 0.02 0.03 0.04 0.05 0.08; 0.10 0.20 0.30 0.25 0.10 0.05], [-3.0, 3.0; 0.5 0.5]]) 
 ```
 
 """
