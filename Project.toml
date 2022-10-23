@@ -1,7 +1,7 @@
 name = "GeneralizedMonteCarlo"
 uuid = "e9bfd9a4-9025-4baf-81dc-99e507987dd3"
 authors = ["sggreenberg <sggreenberg@protonmail.com>"]
-version = "0.1.1"
+version = "0.1.2"
 
 [compat]
 julia = "1.6, 1.8"
