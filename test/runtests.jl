@@ -4,8 +4,8 @@ using Test, Distributions, Symbolics
     @testset "PMF input" begin
         @test issubset(GeneralizedMonteCarlo.inputPassthrough([.01 .02 .03 .04 .05 .08; .1 .2 .3 .25 .10 .05]), [.01, .02, .03, .04, .05, .08])
         @test isa(GeneralizedMonteCarlo.inputPassthrough([.01 .02 .03 .04 .05 .08; .1 .2 .3 .25 .10 .05]), Float64)
-        @test_throws ArgumentError GeneralizedMonteCarlo.inputPassthrough([.01 .02 .03 .04 .05 .08; .1 .2 .3 .25 .10 .05; 1 2 3 4 5 6])
-        @test_throws ArgumentError GeneralizedMonteCarlo.inputPassthrough([.01 .02 .03 .04 .05 .08; .1 .2 .3 .25 .10 .15])
+        @test_throws Union{ArgumentError, DomainError} GeneralizedMonteCarlo.inputPassthrough([.01 .02 .03 .04 .05 .08; .1 .2 .3 .25 .10 .05; 1 2 3 4 5 6])
+        @test_throws Union{ArgumentError, DomainError} GeneralizedMonteCarlo.inputPassthrough([.01 .02 .03 .04 .05 .08; .1 .2 .3 .25 .10 .15])
     end
     @testset "Sampleable input" begin
         @test 0 ≤ GeneralizedMonteCarlo.inputPassthrough(Distributions.Uniform(0, 1)) ≤ 1

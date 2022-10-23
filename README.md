@@ -12,7 +12,7 @@ As of v0.1.0 it contains two type-stable functions:
 #### Example
 
 ```julia
-julia> GeneralizedMonteCarlo.inputPassthrough([.01 .02 .03 .04 .05 .08; .1 .2 .3 .25 .10 .05])
+julia> GeneralizedMonteCarlo.inputPassthrough(\[.01 .02 .03 .04 .05 .08; .1 .2 .3 .25 .10 .05\])
 ```
 
 The example above makes a randome draw from the above matrix written as a pmf 
@@ -43,7 +43,7 @@ and the macro `@variables` comes from the Symbolics.jl package
 
 #### Example
 ```julia
-julia> @variables iws ms p; GeneralizedMonteCarlo.GMC(10_000, [iws, ms, 190 + ms + p], [iws, ms, p], [[10_000_000 10_500_000 11_000_000; 0.2 0.6 0.2], [0.01 0.02 0.03 0.04 0.05 0.08; 0.10 0.20 0.30 0.25 0.10 0.05], [-3.0 3.0; 0.5 0.5]]) 
+julia> @variables iws ms p; GeneralizedMonteCarlo.GMC(10_000, \[iws, ms, 190 + ms + p\], \[iws, ms, p\], \[\[10_000_000 10_500_000 11_000_000; 0.2 0.6 0.2\], \[0.01 0.02 0.03 0.04 0.05 0.08; 0.10 0.20 0.30 0.25 0.10 0.05\], \[-3.0 3.0; 0.5 0.5\]\]) 
 ```
 This example above first has the prerequisite of making sure each input of symbol is defined beforehand with @variables macro from the Symbolics.jl package. The GMC function then runs 10,000 samples of each symbol (iws, ms, and p) based on the defined pmf from probs. It then calculates the result of each of the equations and returns an array of all of the results as well as well as an array of all the draws.
    
